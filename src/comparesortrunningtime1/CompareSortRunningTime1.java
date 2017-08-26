@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package comparesortrunningtime;
+package comparesortrunningtime1;
 
 /**
  *
  * @author jason
  */
-public class CompareSortRunningTime {
+public class CompareSortRunningTime1 {
 
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]
@@ -110,7 +110,7 @@ public class CompareSortRunningTime {
         System.out.println("Given Array");
         printArray(arr);
  
-        CompareSortRunningTime ob = new CompareSortRunningTime();
+        CompareSortRunningTime1 ob = new CompareSortRunningTime1();
         
         long startTime = System.nanoTime();
         ob.sort(arr, 0, arr.length-1);

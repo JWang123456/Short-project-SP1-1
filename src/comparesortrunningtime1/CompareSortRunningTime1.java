@@ -12,6 +12,8 @@ package comparesortrunningtime1;
  * Comment by Xing Yao in develop branch
  * Another comment in own branch
  * Test 1
+ * 
+ * Test 4
  */
 public class CompareSortRunningTime1 {
 

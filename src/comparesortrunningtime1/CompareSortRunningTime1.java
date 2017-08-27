@@ -8,6 +8,8 @@ package comparesortrunningtime1;
 /**
  *
  * @author jason
+ * 
+ * Comment by Xing Yao
  */
 public class CompareSortRunningTime1 {
 

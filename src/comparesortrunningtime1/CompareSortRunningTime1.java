@@ -16,6 +16,8 @@ public class CompareSortRunningTime1 {
     // Second subarray is arr[m+1..r]
     void merge(int arr[], int l, int m, int r)
     {
+    	//Comment by Xing Yao
+    	
         // Find sizes of two subarrays to be merged
         int n1 = m - l + 1;
         int n2 = r - m;

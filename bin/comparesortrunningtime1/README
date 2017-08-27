@@ -1,0 +1,8 @@
+
+Due: 11:59 PM, Sun, Sep 3.
+_________________________
+   Signatures:
+   // tmp array is used to store values during the merge operation.
+   static<T extends Comparable<? super T>> void mergeSort(T[] arr, T[] tmp)
+   static void mergeSort(int[] arr, int[] tmp)
+   static<T extends Comparable<? super T>> void nSquareSort(T[] arr)

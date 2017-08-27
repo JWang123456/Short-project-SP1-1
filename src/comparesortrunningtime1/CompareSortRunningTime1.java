@@ -10,7 +10,7 @@ package comparesortrunningtime1;
  * @author jason
  * 
  * Comment by Xing Yao in develop branch
- * Another comment
+ * Another comment in own branch
  */
 public class CompareSortRunningTime1 {
 

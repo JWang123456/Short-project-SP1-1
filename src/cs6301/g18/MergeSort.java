@@ -1,21 +1,6 @@
 package cs6301.g18;
 
 public class MergeSort<T> {
-	
-	private T t;
-		
-	public T getT() {
-		return t;
-	}
-
-	public void setT(T t) {
-		this.t = t;
-	}
-	
-	public <U extends Number> void inspect(U u){
-        System.out.println("T: " + t.getClass().getName());
-        System.out.println("U: " + u.getClass().getName());
-    }
 
 	static<T extends Comparable<? super T>> void mergeSort(T[] arr, T[] tmp) {
 		   mergeSort(arr, tmp, 0, arr.length - 1);

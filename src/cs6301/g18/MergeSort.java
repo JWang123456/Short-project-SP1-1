@@ -112,9 +112,9 @@ public class MergeSort<T> {
 		   timer3.end();
 		   System.out.println(timer3.toString());
 		   
-		   int[] arr4 = new int[(int) Math.pow(2, 20) / 4];
+		   int[] arr4 = new int[(int) Math.pow(2, 20) * 4];
 		   for(int i = 0; i < arr4.length; i++) {
-			   arr4[i] = (int) (Math.random() * Math.pow(2, 20) / 4);
+			   arr4[i] = (int) (Math.random() * Math.pow(2, 20) * 4);
 		   }
 		   int[] tmp4 = new int[arr4.length];
 		   Timer timer4 = new Timer();

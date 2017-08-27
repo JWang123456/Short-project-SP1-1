@@ -10,7 +10,7 @@ package comparesortrunningtime1;
  * @author jason
  * 
  * 
- */Hello
+ */
 public class CompareSortRunningTime1 {
 
     // Merges two subarrays of arr[].

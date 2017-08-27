@@ -6,14 +6,11 @@
 package comparesortrunningtime1;
 
 /**
- *
- * @author jason
- * 
- * Comment by Xing Yao in develop branch
- * Test 2
- * 
- * Test 3 6
- */
+*
+* @author jason
+* 
+* 
+*/
 public class CompareSortRunningTime1 {
 
     // Merges two subarrays of arr[].

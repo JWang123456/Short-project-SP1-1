@@ -40,32 +40,36 @@ public class Bfs {
 		queue.offer(start);
 		while(!queue.isEmpty()) {
 			Vertex cur = queue.poll();
-			List<Edge> edges = cur.adj;
+			List<Edge> edges = cur.revAdj;
 			for(Edge edge: edges) {
-				distance.put(edge.to, distance.containsKey(edge.from) ? distance.get(edge.from) : 0 + edge.weight);
+				distance.put(edge.from, distance.containsKey(edge.to) ? distance.get(edge.to) : 0 + edge.weight);
 				LinkedList<Graph.Vertex> list = null;
-				if(path.containsKey(edge.from)) {
-					list = path.get(edge.from);
+				if(path.containsKey(edge.to)) {
+					list = path.get(edge.to);
 				} else {
 					list = new LinkedList<>();
 				}
-				list.add(edge.to);
-				path.put(edge.to, list);
-				queue.offer(edge.to);
+				list.add(edge.from);
+				path.put(edge.from, list);
+				queue.offer(edge.from);
 			}
 		}
 		int umax = 0;
 		Vertex p = null;
 		for(Vertex ver: distance.keySet()) {
-			max = Math.max(max, distance.get(ver));
-			if(max == distance.get(ver)) {
+			umax = Math.max(umax, distance.get(ver));
+			if(umax == distance.get(ver)) {
 				p = ver;
 			}
 		}
+		path.get(p).add(0, start);
 		return path.get(p);
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner in = new Scanner(new File("graph.in"));
+		Graph g = Graph.readDirectedGraph(in);
+		LinkedList<Graph.Vertex> path = diameter(g);
+		System.out.println(path);
 	}
 }

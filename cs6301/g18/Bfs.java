@@ -14,16 +14,21 @@ import cs6301.g18.Graph.Vertex;
 public class Bfs {
 	
 	static LinkedList<Graph.Vertex> diameter(Graph g) {
+		HashMap<Vertex, Boolean> visited = new HashMap<>();
 		HashMap<Vertex, Integer> distance = new HashMap<>();
 		Vertex start = g.v[0];
 		Queue<Vertex> queue = new LinkedList<>();
 		queue.offer(start);
 		while(!queue.isEmpty()) {
 			Vertex cur = queue.poll();
+			visited.put(cur, true);
 			List<Edge> edges = cur.adj;
 			for(Edge edge: edges) {
-				distance.put(edge.to, distance.containsKey(edge.from) ? distance.get(edge.from) : 0 + edge.weight);
-				queue.offer(edge.to);
+				if(!visited.containsKey(edge.to) || !visited.get(edge.to)) {
+					distance.put(edge.to, distance.containsKey(edge.from) ? distance.get(edge.from) : 0 + edge.weight);
+					queue.offer(edge.to);
+				}
+				
 			}
 		}
 		int max = 0;
@@ -36,22 +41,27 @@ public class Bfs {
 		}
 		HashMap<Vertex, LinkedList<Graph.Vertex>> path = new HashMap<>();
 		distance = new HashMap<>();
+		visited = new HashMap<>();
 		start = u;
 		queue.offer(start);
 		while(!queue.isEmpty()) {
 			Vertex cur = queue.poll();
-			List<Edge> edges = cur.revAdj;
+			visited.put(cur, true);
+			List<Edge> edges = g.directed ? cur.revAdj : cur.adj;
 			for(Edge edge: edges) {
-				distance.put(edge.from, distance.containsKey(edge.to) ? distance.get(edge.to) : 0 + edge.weight);
-				LinkedList<Graph.Vertex> list = null;
-				if(path.containsKey(edge.to)) {
-					list = path.get(edge.to);
-				} else {
-					list = new LinkedList<>();
+				if(!visited.containsKey(edge.from) || !visited.get(edge.from)) {
+					distance.put(edge.from, distance.containsKey(edge.to) ? distance.get(edge.to) : 0 + edge.weight);
+					LinkedList<Graph.Vertex> list = null;
+					if(path.containsKey(edge.to)) {
+						list = path.get(edge.to);
+					} else {
+						list = new LinkedList<>();
+					}
+					list.add(edge.from);
+					path.put(edge.from, list);
+					queue.offer(edge.from);
 				}
-				list.add(edge.from);
-				path.put(edge.from, list);
-				queue.offer(edge.from);
+				
 			}
 		}
 		int umax = 0;
@@ -62,7 +72,7 @@ public class Bfs {
 				p = ver;
 			}
 		}
-		path.get(p).add(0, start);
+		path.get(p).add(0, u);
 		return path.get(p);
 	}
 	
@@ -70,6 +80,11 @@ public class Bfs {
 		Scanner in = new Scanner(new File("graph.in"));
 		Graph g = Graph.readDirectedGraph(in);
 		LinkedList<Graph.Vertex> path = diameter(g);
-		System.out.println(path);
+		System.out.println("In directed graph, the longest path is: " + path);
+		
+		Scanner uin = new Scanner(new File("ugraph.in"));
+		Graph ug = Graph.readGraph(uin);
+		LinkedList<Graph.Vertex> upath = diameter(ug);
+		System.out.println("In unirected graph, the longest path is: " + upath);
 	}
 }

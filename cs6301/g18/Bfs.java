@@ -11,6 +11,7 @@ import java.util.Scanner;
 import cs6301.g18.Graph.Edge;
 import cs6301.g18.Graph.Vertex;
 
+//Some
 public class Bfs {
 	
 	static LinkedList<Graph.Vertex> diameter(Graph g) {

@@ -11,7 +11,6 @@ import java.util.Scanner;
 import cs6301.g18.Graph.Edge;
 import cs6301.g18.Graph.Vertex;
 
-//Some
 public class Bfs {
 	
 	static LinkedList<Graph.Vertex> diameter(Graph g) {
@@ -25,9 +24,10 @@ public class Bfs {
 			visited.put(cur, true);
 			List<Edge> edges = cur.adj;
 			for(Edge edge: edges) {
-				if(!visited.containsKey(edge.to) || !visited.get(edge.to)) {
-					distance.put(edge.to, distance.containsKey(edge.from) ? distance.get(edge.from) : 0 + edge.weight);
-					queue.offer(edge.to);
+				if(!visited.containsKey(edge.otherEnd(cur)) || !visited.get(edge.otherEnd(cur))) {
+					visited.put(edge.otherEnd(cur), true);
+					distance.put(edge.otherEnd(cur), (distance.containsKey(cur) ? distance.get(cur) : 0) + edge.weight);
+					queue.offer(edge.otherEnd(cur));
 				}
 				
 			}
@@ -48,19 +48,22 @@ public class Bfs {
 		while(!queue.isEmpty()) {
 			Vertex cur = queue.poll();
 			visited.put(cur, true);
-			List<Edge> edges = g.directed ? cur.revAdj : cur.adj;
+			List<Edge> edges = cur.adj;
 			for(Edge edge: edges) {
-				if(!visited.containsKey(edge.from) || !visited.get(edge.from)) {
-					distance.put(edge.from, distance.containsKey(edge.to) ? distance.get(edge.to) : 0 + edge.weight);
+				if(!visited.containsKey(edge.otherEnd(cur)) || !visited.get(edge.otherEnd(cur))) {
+					visited.put(edge.otherEnd(cur), true);
+					distance.put(edge.otherEnd(cur), (distance.containsKey(cur) ? distance.get(cur) : 0) + edge.weight);
+					
 					LinkedList<Graph.Vertex> list = null;
-					if(path.containsKey(edge.to)) {
-						list = path.get(edge.to);
+					if(path.containsKey(cur)) {
+						list = new LinkedList<>(path.get(cur));
 					} else {
 						list = new LinkedList<>();
 					}
-					list.add(edge.from);
-					path.put(edge.from, list);
-					queue.offer(edge.from);
+					list.add(edge.otherEnd(cur));
+					path.put(edge.otherEnd(cur), list);
+					
+					queue.offer(edge.otherEnd(cur));
 				}
 				
 			}
@@ -73,19 +76,16 @@ public class Bfs {
 				p = ver;
 			}
 		}
-		path.get(p).add(0, u);
+		path.get(p).add(0, start);
 		return path.get(p);
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner in = new Scanner(new File("graph.in"));
-		Graph g = Graph.readDirectedGraph(in);
-		LinkedList<Graph.Vertex> path = diameter(g);
-		System.out.println("In directed graph, the longest path is: " + path);
 		
 		Scanner uin = new Scanner(new File("ugraph.in"));
 		Graph ug = Graph.readGraph(uin);
 		LinkedList<Graph.Vertex> upath = diameter(ug);
-		System.out.println("In unirected graph, the longest path is: " + upath);
+		System.out.println("In the graph, the longest path is: " + upath);
+		
 	}
 }

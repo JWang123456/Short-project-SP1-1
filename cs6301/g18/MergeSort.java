@@ -77,46 +77,9 @@ public class MergeSort<T> {
 	   
 	   public static <T> void main(String[] args) {
 		   
-
-		   
-//		   Integer[] arr2 = new Integer[(int) Math.pow(2, 20) * 16];
-//		   for(int i = 0; i < arr2.length; i++) {
-//			   arr2[i] = (int) (Math.random() * Math.pow(2, 20) * 16);
-//		   }
-//		   Integer[] tmp2 = new Integer[arr2.length];
-//		   Shuffle.shuffle(arr2, 0, arr2.length - 1);
-//		   Timer timer2 = new Timer();
-//		   timer2.start();
-//		   MergeSort.mergeSort(arr2, tmp2);
-//		   timer2.end();
-//		   System.out.println(timer2.toString());
-//		   
-//		   Character[] arr1 = new Character[(int) Math.pow(2, 20) / 1000];
-//		   for(int i = 0; i < arr1.length; i++) {
-//			   arr1[i] = (char) (Math.random() * Math.pow(2, 20) / 1000);
-//		   }
-//		   Character[] tmp = new Character[arr1.length];
-//		   Shuffle.shuffle(arr1, 0, arr1.length - 1);
-//		   Timer timer1 = new Timer();
-//		   timer1.start();
-//		   MergeSort.mergeSort(arr1, tmp);
-//		   timer1.end();
-//		   System.out.println(timer1.toString());
-		   
-//		   Character[] arr2 = new Character[(int) Math.pow(2, 20) * 16];
-//		   for(int i = 0; i < arr2.length; i++) {
-//			   arr2[i] = (char) (Math.random() * Math.pow(2, 20) * 16);
-//		   }
-//		   Character[] tmp2 = new Character[arr2.length];
-//		   Shuffle.shuffle(arr2, 0, arr2.length - 1);
-//		   Timer timer2 = new Timer();
-//		   timer2.start();
-//		   MergeSort.mergeSort(arr2, tmp2);
-//		   timer2.end();
-//		   System.out.println(timer2.toString());
-//		   
-		   for(int p = 1; p <= 16 ; p++) {
-			   
+//		   for(int p = 1; p <= 16 ; p++) {
+//			   
+//			   //MergeSort General type: Integer
 //			   Integer[] arr1 = new Integer[(int) Math.pow(2, 20) * p];
 //			   for(int i = 0; i < arr1.length; i++) {
 //				   arr1[i] = (int) (Math.random() * Math.pow(2, 0) * p);
@@ -127,20 +90,27 @@ public class MergeSort<T> {
 //			   timer1.start();
 //			   MergeSort.mergeSort(arr1, tmp);
 //			   timer1.end();
-//			   System.out.println(timer1.toString());
-			   
-		   Integer[] arr5 = new Integer[(int) Math.pow(2, 20) * p];
-		   for(int i = 0; i < arr5.length; i++) {
-			   arr5[i] = (int) (Math.random() * Math.pow(2, 20) * p);
-		   }
-		   Integer[] tmp5 = new Integer[arr5.length];
-		   Shuffle.shuffle(arr5, 0, arr5.length - 1);
-		   Timer timer5 = new Timer();
-		   timer5.start();
-		   MergeSort.nSquareSort(arr5);
-		   timer5.end();
-		   System.out.println(timer5.toString());
-			   
+//			   System.out.println("MergeSort General type: Integer " + p + "M: " + timer1.toString());
+//			   
+//		   }
+		   
+//		   for(int p = 1; p <= 16 ; p++) {
+//			   //MergeSort General type: Character
+//			   Character[] arr2 = new Character[(int) Math.pow(2, 20) * p];
+//			   for(int i = 0; i < arr2.length; i++) {
+//				   arr2[i] = (char) (Math.random() * Math.pow(2, 20) * p);
+//			   }
+//			   Character[] tmp2 = new Character[arr2.length];
+//			   Shuffle.shuffle(arr2, 0, arr2.length - 1);
+//			   Timer timer2 = new Timer();
+//			   timer2.start();
+//			   MergeSort.mergeSort(arr2, tmp2);
+//			   timer2.end();
+//			   System.out.println("MergeSort General type: Character " + p + "M: " + timer2.toString());
+//		   }
+		   
+//		   for(int p = 1; p <= 16 ; p++) {
+//			   //MergeSort int type
 //			   int[] arr3 = new int[(int) Math.pow(2, 20) * p];
 //			   for(int i = 0; i < arr3.length; i++) {
 //				   arr3[i] = (int) (Math.random() * Math.pow(2, 20) * p);
@@ -150,56 +120,63 @@ public class MergeSort<T> {
 //			   timer3.start();
 //			   MergeSort.mergeSort(arr3, tmp3);
 //			   timer3.end();
-//			   System.out.println(timer3.toString());
+//			   System.out.println("MergeSort int type " + p + "M: " + timer3.toString());
+//		   }
+		   
+//		   for(int p = 1; p <= 16 ; p++) {
+//			   //InsertionSort General type: Character
+//			   Character[] arr5 = new Character[(int) Math.pow(2, 20) * p];
+//			   for(int i = 0; i < arr5.length; i++) {
+//				   arr5[i] = (char) (Math.random() * Math.pow(2, 20) * p);
+//			   }
+//			   Character[] tmp5 = new Character[arr5.length];
+//			   Shuffle.shuffle(arr5, 0, arr5.length - 1);
+//			   Timer timer5 = new Timer();
+//			   timer5.start();
+//			   MergeSort.nSquareSort(arr5);
+//			   timer5.end();
+//			   System.out.println("InsertionSort General type: Character " + p + "M: " + timer5.toString());
+//		   }
+//		   
+		   for(int p = 1; p <= 16 ; p++) {
+			   
+			   //InsertionSort General type: Integer
+			   Integer[] arr6 = new Integer[(int) Math.pow(2, 20) * p];
+			   for(int i = 0; i < arr6.length; i++) {
+				   arr6[i] = (int) (Math.random() * Math.pow(2, 20) * p);
+			   }
+			   Integer[] tmp6 = new Integer[arr6.length];
+			   Shuffle.shuffle(arr6, 0, arr6.length - 1);
+			   Timer timer6 = new Timer();
+			   timer6.start();
+			   MergeSort.nSquareSort(arr6);
+			   timer6.end();
+			   System.out.println("MergeSort General type: Integer " + p + "M: " + timer6.toString());
 		   }
 		   
-		   
-//		   
-//		   int[] arr4 = new int[(int) Math.pow(2, 20) * 16];
-//		   for(int i = 0; i < arr4.length; i++) {
-//			   arr4[i] = (int) (Math.random() * Math.pow(2, 20) * 16);
-//		   }
-//		   int[] tmp4 = new int[arr4.length];
-//		   Timer timer4 = new Timer();
-//		   timer4.start();
-//		   MergeSort.mergeSort(arr4, tmp4);
-//		   timer4.end();
-//		   System.out.println(timer4.toString());
-//		   
-////		   Integer[] arr5 = new Integer[(int) Math.pow(2, 20)];
-////		   for(int i = 0; i < arr5.length; i++) {
-////			   arr5[i] = (int) (Math.random() * Math.pow(2, 20));
-////		   }
-////		   Integer[] tmp5 = new Integer[arr5.length];
-////		   Shuffle.shuffle(arr5, 0, arr5.length - 1);
-////		   Timer timer5 = new Timer();
-////		   timer5.start();
-////		   MergeSort.nSquareSort(arr5);
-////		   timer5.end();
-////		   System.out.println(timer5.toString());
-		   
-//		   Character[] arr5 = new Character[(int) Math.pow(2, 20)];
-//		   for(int i = 0; i < arr5.length; i++) {
-//			   arr5[i] = (char) (Math.random() * Math.pow(2, 20));
-//		   }
-//		   Character[] tmp5 = new Character[arr5.length];
-//		   Shuffle.shuffle(arr5, 0, arr5.length - 1);
-//		   Timer timer5 = new Timer();
-//		   timer5.start();
-//		   MergeSort.nSquareSort(arr5);
-//		   timer5.end();
-//		   System.out.println(timer5.toString());
-//		   
-//		   Integer[] arr6 = new Integer[(int) Math.pow(2, 20) * 16];
-//		   for(int i = 0; i < arr6.length; i++) {
-//			   arr6[i] = (int) (Math.random() * Math.pow(2, 20) * 16);
-//		   }
-//		   Integer[] tmp6 = new Integer[arr6.length];
-//		   Shuffle.shuffle(arr6, 0, arr6.length - 1);
-//		   Timer timer6 = new Timer();
-//		   timer6.start();
-//		   MergeSort.nSquareSort(arr6);
-//		   timer6.end();
-//		   System.out.println(timer6.toString());
 	   }
+		   
+		   
+		   
+
+//		   
+
+		   
+
+//		   
+		   
+			   
+
+			   
+		   
+			   
+
+//		   
+
+		   
+
+//		   
+
+	   
+	
 }

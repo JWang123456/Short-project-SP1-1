@@ -15,13 +15,13 @@ public class Bfs {
 	
 	Graph g;
 	HashMap<Vertex, Boolean> visited = new HashMap<>();
-	HashMap<Vertex, LinkedList<Graph.Vertex>> path = new HashMap<>();
+	HashMap<Vertex, LinkedList<Graph.Vertex>> pathMap = new HashMap<>();
 	Queue<Vertex> queue = new LinkedList<>();
 
 	public Bfs(Graph g) {
 		this.g = g;
 		this.visited = new HashMap<>();
-		this.path = new HashMap<>();
+		this.pathMap = new HashMap<>();
 		this.queue = new LinkedList<>();
 	}
 	
@@ -37,19 +37,21 @@ public class Bfs {
 				if(!visited.containsKey(edge.otherEnd(cur)) || !visited.get(edge.otherEnd(cur))) {
 					visited.put(edge.otherEnd(cur), true);
 					LinkedList<Graph.Vertex> list = null;
-					if(path.containsKey(cur)) {
-						list = new LinkedList<>(path.get(cur));
+					if(pathMap.containsKey(cur)) {
+						list = new LinkedList<>(pathMap.get(cur));
 					} else {
 						list = new LinkedList<>();
 					}
 					list.add(edge.otherEnd(cur));
-					path.put(edge.otherEnd(cur), list);
+					pathMap.put(edge.otherEnd(cur), list);
 					queue.offer(edge.otherEnd(cur));
 				}	
 			}
 			
 		}
 		end = cur;
+		pathMap.get(end).add(0, start);
 		return end;
 	}
+	
 }

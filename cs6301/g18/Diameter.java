@@ -23,12 +23,11 @@ public class Diameter {
 	public void diameter(Graph g) {
 		Bfs b = new Bfs(g);
 		Vertex oldEnd = b.bfs(start);
-		b.path = new HashMap<>();
+		b.pathMap = new HashMap<>();
 		b.visited = new HashMap<>();
 		newEnd = b.bfs(oldEnd);
 		this.newEnd = newEnd;
-		b.path.get(newEnd).add(0, oldEnd);
-		this.path = b.path.get(newEnd);
+		this.path = b.pathMap.get(newEnd);
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException {

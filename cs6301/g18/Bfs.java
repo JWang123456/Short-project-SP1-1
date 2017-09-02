@@ -32,6 +32,7 @@ public class Bfs {
 			for(Edge edge: edges) {
 				if(!visited.containsKey(edge.otherEnd(cur)) || !visited.get(edge.otherEnd(cur))) {
 					visited.put(edge.otherEnd(cur), true);
+					//Use pathMap to record path from starting point to current point (starting point not included)
 					LinkedList<Graph.Vertex> list = null;
 					if(pathMap.containsKey(cur)) {
 						list = new LinkedList<>(pathMap.get(cur));
@@ -46,6 +47,7 @@ public class Bfs {
 			
 		}
 		end = cur;
+		//Add starting point to path
 		pathMap.get(end).add(0, start);
 		return end;
 	}

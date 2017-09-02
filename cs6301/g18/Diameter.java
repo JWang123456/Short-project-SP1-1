@@ -16,7 +16,7 @@ public class Diameter {
 	LinkedList<Graph.Vertex> path;
 	
 	public Diameter(Graph g) {
-		start = g.v[(int) (Math.random() * g.n)];
+		this.start = g.v[(int) (Math.random() * g.n)];
 		this.g = g;
 	}
 	
@@ -25,7 +25,7 @@ public class Diameter {
 		Vertex oldEnd = b.bfs(start);
 		b.pathMap = new HashMap<>();
 		b.visited = new HashMap<>();
-		newEnd = b.bfs(oldEnd);
+		Vertex newEnd = b.bfs(oldEnd);
 		this.newEnd = newEnd;
 		this.path = b.pathMap.get(newEnd);
 	}

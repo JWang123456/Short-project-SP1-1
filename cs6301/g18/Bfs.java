@@ -1,13 +1,9 @@
 package cs6301.g18;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Scanner;
-
 import cs6301.g18.Graph.Edge;
 import cs6301.g18.Graph.Vertex;
 

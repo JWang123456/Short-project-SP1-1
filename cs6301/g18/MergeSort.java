@@ -1,13 +1,8 @@
 package cs6301.g18;
 
-import java.util.concurrent.Callable;
-
 public class MergeSort<T> {
 	
-	private long waitTime;
-	
 	public MergeSort(int timeInMillis) {
-		this.waitTime = timeInMillis;
 	}
 
 	static<T extends Comparable<? super T>> void mergeSort(T[] arr, T[] tmp) {

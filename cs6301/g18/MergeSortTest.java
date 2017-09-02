@@ -37,7 +37,6 @@ public class MergeSortTest {
 					try {
 						s = futureTask.get(120 * 1000, TimeUnit.MILLISECONDS);
 					} catch (TimeoutException e) {
-						// TODO Auto-generated catch block
 						content += p + "M: " + "Time Exceeded" + "\n";
 						break;
 					}
@@ -63,7 +62,6 @@ public class MergeSortTest {
 					try {
 						s = futureTask.get(120 * 1000, TimeUnit.MILLISECONDS);
 					} catch (TimeoutException e) {
-						// TODO Auto-generated catch block
 						content += p + "M: " + "Time Exceeded" + "\n";
 						break;
 					}
@@ -90,7 +88,6 @@ public class MergeSortTest {
 					try {
 						s = futureTask.get(120 * 1000, TimeUnit.MILLISECONDS);
 					} catch (TimeoutException e) {
-						// TODO Auto-generated catch block
 						content += p + "M: " + "Time Exceeded" + "\n";
 						break;
 					}
@@ -153,10 +150,8 @@ public class MergeSortTest {
 			this.timer1 = timer1;
 		}
 		
-		@SuppressWarnings("unchecked")
 		@Override
 		public String call() throws Exception {
-			// TODO Auto-generated method stub
 			timer1.start();
 			MergeSort.mergeSort(arr1, tmp);
 			timer1.end();
@@ -178,10 +173,8 @@ public class MergeSortTest {
 			this.timer1 = timer1;
 		}
 		
-		@SuppressWarnings("unchecked")
 		@Override
 		public String call() throws Exception {
-			// TODO Auto-generated method stub
 			timer1.start();
 			MergeSort.mergeSort(arr1, tmp);
 			timer1.end();
@@ -201,10 +194,8 @@ public class MergeSortTest {
 			this.timer1 = timer1;
 		}
 		
-		@SuppressWarnings("unchecked")
 		@Override
 		public String call() throws Exception {
-			// TODO Auto-generated method stub
 			timer1.start();
 			MergeSort.nSquareSort(arr1);
 			timer1.end();

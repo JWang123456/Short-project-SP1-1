@@ -88,7 +88,6 @@ public class MergeSortTest {
 					   });
 					   timeout.start();
 					   while(!sort.isAlive()) {
-						   Thread.sleep(1);
 						   if(!timeout.isAlive()) break;
 					   }
 					  

@@ -1,0 +1,36 @@
+MergerSort Integer: 
+1M: Time: 228 msec.
+Memory: 72 MB / 155 MB.
+4M: Time: 1320 msec.
+Memory: 141 MB / 280 MB.
+7M: Time: 5744 msec.
+Memory: 142 MB / 408 MB.
+10M: Time: 6158 msec.
+Memory: 159 MB / 560 MB.
+13M: Time: 7344 msec.
+Memory: 199 MB / 756 MB.
+16M: Time: 8604 msec.
+Memory: 192 MB / 960 MB.
+
+MergerSort int: 
+1M: Time: 186 msec.
+Memory: 304 MB / 960 MB.
+4M: Time: 943 msec.
+Memory: 277 MB / 969 MB.
+7M: Time: 1569 msec.
+Memory: 332 MB / 979 MB.
+10M: Time: 2247 msec.
+Memory: 462 MB / 1001 MB.
+13M: Time: 2960 msec.
+Memory: 156 MB / 1156 MB.
+16M: Time: 3434 msec.
+Memory: 635 MB / 1165 MB.
+
+InsertionSort Integer: 
+1M: Time Exceeded
+4M: Time Exceeded
+7M: Time Exceeded
+10M: Time Exceeded
+13M: Time Exceeded
+16M: Time Exceeded
+

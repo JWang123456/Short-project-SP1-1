@@ -1,0 +1,64 @@
+MergeSort General type: Integer 1M: Time: 622 msec.
+Memory: 109 MB / 981 MB.
+MergeSort General type: Integer 2M: Time: 1735 msec.
+Memory: 86 MB / 981 MB.
+MergeSort General type: Integer 3M: Time: 1972 msec.
+Memory: 178 MB / 1237 MB.
+MergeSort General type: Integer 4M: Time: 3545 msec.
+Memory: 118 MB / 1237 MB.
+MergeSort General type: Integer 5M: Time: 5541 msec.
+Memory: 200 MB / 1316 MB.
+MergeSort General type: Integer 6M: Time: 3577 msec.
+Memory: 316 MB / 1298 MB.
+MergeSort General type: Integer 7M: Time: 4235 msec.
+Memory: 576 MB / 1317 MB.
+MergeSort General type: Integer 8M: Time: 3017 msec.
+Memory: 360 MB / 1315 MB.
+MergeSort General type: Integer 9M: Time: 6591 msec.
+Memory: 282 MB / 1313 MB.
+MergeSort General type: Integer 10M: Time: 7287 msec.
+Memory: 350 MB / 1305 MB.
+MergeSort General type: Integer 11M: Time: 8115 msec.
+Memory: 613 MB / 1299 MB.
+MergeSort General type: Integer 12M: Time: 9770 msec.
+Memory: 488 MB / 1232 MB.
+MergeSort General type: Integer 13M: Time: 10451 msec.
+Memory: 540 MB / 1287 MB.
+MergeSort General type: Integer 14M: Time: 18358 msec.
+Memory: 263 MB / 1204 MB.
+MergeSort General type: Integer 15M: Time: 11681 msec.
+Memory: 657 MB / 1256 MB.
+MergeSort General type: Integer 16M: Time: 12868 msec.
+Memory: 364 MB / 1200 MB.
+MergeSort int type 1M: Time: 648 msec.
+Memory: 469 MB / 1200 MB.
+MergeSort int type 2M: Time: 1288 msec.
+Memory: 684 MB / 1200 MB.
+MergeSort int type 3M: Time: 2187 msec.
+Memory: 530 MB / 1250 MB.
+MergeSort int type 4M: Time: 3160 msec.
+Memory: 539 MB / 1169 MB.
+MergeSort int type 5M: Time: 3718 msec.
+Memory: 661 MB / 1245 MB.
+MergeSort int type 6M: Time: 4758 msec.
+Memory: 449 MB / 1255 MB.
+MergeSort int type 7M: Time: 5527 msec.
+Memory: 344 MB / 1264 MB.
+MergeSort int type 8M: Time: 5943 msec.
+Memory: 784 MB / 1235 MB.
+MergeSort int type 9M: Time: 6900 msec.
+Memory: 421 MB / 1246 MB.
+MergeSort int type 10M: Time: 7654 msec.
+Memory: 702 MB / 1234 MB.
+MergeSort int type 11M: Time: 8616 msec.
+Memory: 735 MB / 1203 MB.
+MergeSort int type 12M: Time: 9408 msec.
+Memory: 557 MB / 1165 MB.
+MergeSort int type 13M: Time: 10561 msec.
+Memory: 670 MB / 1137 MB.
+MergeSort int type 14M: Time: 11736 msec.
+Memory: 438 MB / 988 MB.
+MergeSort int type 15M: Time: 12905 msec.
+Memory: 626 MB / 1161 MB.
+MergeSort int type 16M: Time: 12424 msec.
+Memory: 192 MB / 1234 MB.
